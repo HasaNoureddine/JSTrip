@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background-image: linear-gradient(crimson, navy);
+  background-repeat: repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  text-decoration: 4px underline crimson;
+}
+
+label {
+  margin: 10px;
+}
+
+.gender {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgb(255, 250, 228);
+  height: 90%;
+  width: 23%;
+  transition: 0.5s;
+  border: 4px solid black;
+}
+form:hover {
+  height: 92%;
+  width: 23.5%;
+  transition: 0.5s;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid crimson;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: rgb(255, 250, 228);
+  transition: 0.5s;
+}
+input:hover {
+  width: 100%;
+  border: 2px solid crimson;
+  transition: 0.5s;
+}
+
+.social {
+  border: 4px solid;
+  height: 9%;
+  width: 80%;
+  margin: 10px;
+  transition: 0.3s;
+}
+.social:hover {
+  height: 10%;
+  width: 85%;
+  transition: 0.3s;
+}
+
+.facebook {
+  background-color: rgb(66 103 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-brands {
+  color: white;
+}
+
+.insta {
+  background-color: rgb(193, 53, 132);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter {
+  background-color: rgb(29, 161, 242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.socialcontainer {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+}
+.container {
+  margin-bottom: 10px;
+}
+.email {
+  margin: 20px;
+}
+
+.password {
+  margin: 20px;
+}
+.address {
+  margin: 20px;
+}
