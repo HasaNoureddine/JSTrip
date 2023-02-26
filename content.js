@@ -5,7 +5,7 @@ function mergesort(arr1, arr2) {
   let j = 0;
   let sorted = [];
   while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
+    if (+arr1[i] < +arr2[j]) {
       sorted.push(arr1[i]);
       i++;
     } else {
@@ -33,7 +33,7 @@ function merge(arr) {
     return arr;
   }
   let mid = Math.floor(arr.length / 2);
-  return mergesort(merge([arr.slice(0, mid)]), merge([arr.slice(mid)]));
+  return mergesort(merge(arr.slice(0, mid)), merge(arr.slice(mid)));
 }
 
 //-----------------------------------------------------------//

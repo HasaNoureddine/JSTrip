@@ -14,10 +14,14 @@
     <form name="form" action="">
         <h1>LogIn</h1>
         <div class="container">
-            <div class="email"><label for="email">email</label><input type="text" placeholder="email"></div>
-            <div class="password"><label for="password">password</label><input type="password" placeholder="password">
+            <div class="email"><label for="email">email</label><input type="text" id="email" placeholder="email"></div>
+            <div class="password"><label for="password">password</label><input id="password" type="password"
+                    placeholder="password">
             </div>
             <div class="address"><label for="address">address</label><input type="text" placeholder="address"></div>
+            <div class="submit"><input id="submit" type="submit" value="LogIn"></div>
+        </div>
+
         </div>
         <div class="signup">
             <p>Or Signup With</p>
@@ -33,7 +37,8 @@
 
     </form>
 
-
+    <script defer src="index.js"></script>
+    <a href="./content.html" id="anchor" style="display: none;">here</a>
 </body>
 
 </html>
