@@ -33,8 +33,9 @@ function merge(arr) {
     return arr;
   }
   let mid = Math.floor(arr.length / 2);
-  return mergesort(merge(arr.slice(0, mid)), merge(arr.slice(mid)));
+  return mergesort(merge([arr.slice(0, mid)]), merge([arr.slice(mid)]));
 }
+
 //-----------------------------------------------------------//
 
 function palindrome(string) {
@@ -71,7 +72,7 @@ class Course {
   checkinstructor() {
     if (this.instructor == `JS`) {
       return `Your instructor will be Christopher`;
-    } else if ((this.instructor = `HTML`)) {
+    } else if (this.instructor == `HTML`) {
       return `Your instructor will be Nour`;
     } else if (this.instructor == `UIUX`) {
       return `Your instructor will be Jouline`;
@@ -110,7 +111,6 @@ function Consonants(string) {
 
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add(`show`);
     } else {
@@ -167,3 +167,28 @@ document.getElementsByClassName("bananabtn")[0].onclick = function () {
 };
 
 //-----------------------------------------------------------//
+
+document.getElementById("create").onclick = function () {
+  if (
+    document.getElementById("input1").value &&
+    document.getElementById("input2").value
+  ) {
+    let obj = new Course(
+      document.getElementById("input1").value,
+      document.getElementById("input2").value
+    );
+
+    document.getElementById("output1").onclick = function () {
+      if (obj) {
+        document.getElementById("CourseDescription").innerHTML =
+          obj.checkschedeule();
+      }
+    };
+    document.getElementById("output2").onclick = function () {
+      if (obj) {
+        document.getElementById("CourseDescription").innerHTML =
+          obj.checkinstructor();
+      }
+    };
+  }
+};
