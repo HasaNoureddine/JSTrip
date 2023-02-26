@@ -122,3 +122,13 @@ merge_sort.onclick = function () {
     "answer1"
   )[0].innerHTML = `The Sorted Array is ${merge(x)}!`;
 };
+
+let palin_drome = document.getElementsByClassName("palbtn")[0];
+palin_drome.onclick = function () {
+  input = prompt("Enter Word here");
+  if (input == palindrome(input)) {
+    document.getElementsByClassName("yn")[0].src = "assets/YES.jpg";
+  } else {
+    document.getElementsByClassName("yn")[0].src = "assets/NO.jpg";
+  }
+};
