@@ -35,24 +35,26 @@ function merge(arr) {
   let mid = Math.floor(arr.length / 2);
   return mergesort(merge(arr.slice(0, mid)), merge(arr.slice(mid)));
 }
+//-----------------------------------------------------------//
 
 function palindrome(string) {
   console.log(string);
   if (string.length < 2) return string;
   return palindrome(string.slice(1, string.length)) + string[0];
 }
+//-----------------------------------------------------------//
 
 function Prime(year) {
-  isPrime = false;
-  let age = prompt("Enter Year of Birth Here!");
-  let number = 2023 - age;
+  isPrime = true;
+  let number = 2023 - year;
   for (i = 2; i < number; i++) {
     if (number % i == 0) {
-      isPrime = true;
+      isPrime = false;
     }
   }
   return isPrime;
 }
+//-----------------------------------------------------------//
 
 class Course {
   constructor(schedeule, instructor) {
@@ -78,6 +80,7 @@ class Course {
     }
   }
 }
+//-----------------------------------------------------------//
 
 function Reverse(string) {
   let answer = ``;
@@ -85,7 +88,10 @@ function Reverse(string) {
     answer += string[string.length - 1];
     string = string.slice(0, string.length - 1);
   }
+  return answer;
 }
+
+//-----------------------------------------------------------//
 
 function Consonants(string) {
   let vowels = [`a`, `o`, `i`, `e`, `u`];
@@ -100,6 +106,7 @@ function Consonants(string) {
   string += `ay`;
   return string;
 }
+//-----------------------------------------------------------//
 
 const obs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -114,6 +121,7 @@ const obs = new IntersectionObserver((entries) => {
 const hiddenelements = document.querySelectorAll(".hidden");
 hiddenelements.forEach((el) => obs.observe(el));
 
+//--------------------------------------------------------//
 let merge_sort = document.getElementsByClassName("merge")[0];
 merge_sort.onclick = function () {
   let x = prompt(`Enter 10 CommaSeperated Values! `);
@@ -122,6 +130,7 @@ merge_sort.onclick = function () {
     "answer1"
   )[0].innerHTML = `The Sorted Array is ${merge(x)}!`;
 };
+//-----------------------------------------------------------//
 
 let palin_drome = document.getElementsByClassName("palbtn")[0];
 palin_drome.onclick = function () {
@@ -130,5 +139,22 @@ palin_drome.onclick = function () {
     document.getElementsByClassName("yn")[0].src = "assets/YES.jpg";
   } else {
     document.getElementsByClassName("yn")[0].src = "assets/NO.jpg";
+  }
+};
+//-----------------------------------------------------------//
+
+let rvrs_string = document.getElementsByClassName("rvrsbtn")[0];
+rvrs_string.onclick = function () {
+  document.getElementsByClassName("textbox3")[0].innerHTML = Reverse(
+    prompt(`Enter Text Here!`)
+  );
+};
+//-----------------------------------------------------------//
+
+document.getElementsByClassName("primebtn")[0].onclick = function () {
+  if (Prime(prompt(`Enter Birth Year Here!`))) {
+    document.getElementsByClassName("textbox4")[0].innerHTML = `YES!`;
+  } else {
+    document.getElementsByClassName("textbox4")[0].innerHTML = `NO`;
   }
 };
