@@ -62,18 +62,18 @@ class Course {
     this.instructor = instructor;
   }
   checkschedeule() {
-    if (this.schedeule == `mwf`) {
+    if (this.schedeule == `MWF`) {
       return `You are expected MON WED FRI from 12pm to 5pm`;
     } else {
       return `You are expected SAT and Sun from 9am to 12pm`;
     }
   }
   checkinstructor() {
-    if (this.instructor == JS) {
+    if (this.instructor == `JS`) {
       return `Your instructor will be Christopher`;
-    } else if ((this.instructor = HTML)) {
+    } else if ((this.instructor = `HTML`)) {
       return `Your instructor will be Nour`;
-    } else if (this.instructor == UI / Ux) {
+    } else if (this.instructor == `UIUX`) {
       return `Your instructor will be Jouline`;
     } else {
       return `Your instructor will be Charbel`;
@@ -158,3 +158,12 @@ document.getElementsByClassName("primebtn")[0].onclick = function () {
     document.getElementsByClassName("textbox4")[0].innerHTML = `NO`;
   }
 };
+//-----------------------------------------------------------//
+
+document.getElementsByClassName("bananabtn")[0].onclick = function () {
+  document.getElementsByClassName("textbox5")[0].innerHTML = Consonants(
+    prompt(`Enter String Here`)
+  );
+};
+
+//-----------------------------------------------------------//
