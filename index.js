@@ -28,3 +28,8 @@ document.getElementById("submit").onclick = function (e) {
     }
   }
 };
+
+User = ` {
+  Email: document.getElementById("email").value,
+  Pass: document.getElementById("password").value,
+}`;
