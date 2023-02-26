@@ -1,4 +1,6 @@
 function mergesort(arr1, arr2) {
+  console.log(`this is arr1 ` + arr1);
+  console.log(`this is arr2 ` + arr2);
   let i = 0;
   let j = 0;
   let sorted = [];
@@ -11,17 +13,22 @@ function mergesort(arr1, arr2) {
       j++;
     }
   }
-
   if (arr1.slice(i).length > 0) {
-    return [sorted, ...arr1.slice(i)];
+    sorted = [...sorted, ...arr1.slice(i)];
+    console.log(sorted);
+    return sorted;
   } else if (arr2.slice(j).length > 0) {
-    return [sorted, ...arr2.slice(j)];
+    sorted = [...sorted, ...arr2.slice(j)];
+    console.log(sorted);
+    return sorted;
   } else {
+    console.log(sorted);
     return sorted;
   }
 }
 
 function merge(arr) {
+  console.log(`this is arr` + arr);
   if (arr.length < 2) {
     return arr;
   }
@@ -93,3 +100,25 @@ function Consonants(string) {
   string += `ay`;
   return string;
 }
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add(`show`);
+    } else {
+      entry.target.classList.remove(`show`);
+    }
+  });
+});
+const hiddenelements = document.querySelectorAll(".hidden");
+hiddenelements.forEach((el) => obs.observe(el));
+
+let merge_sort = document.getElementsByClassName("merge")[0];
+merge_sort.onclick = function () {
+  let x = prompt(`Enter 10 CommaSeperated Values! `);
+  x = x.split(",");
+  document.getElementsByClassName(
+    "answer1"
+  )[0].innerHTML = `The Sorted Array is ${merge(x)}!`;
+};
