@@ -2,26 +2,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
-  background-image: linear-gradient(crimson, navy);
-  background-repeat: repeat;
+  height: 140vh;
+  background-image: linear-gradient(90deg, rgb(193, 53, 132), rgb(66 103 178));
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   margin-left: 20px;
   margin-bottom: 50px;
-  text-decoration: 4px underline crimson;
+  text-decoration: 4px underline rgb(193, 53, 132);
 }
 
 label {
   margin: 10px;
-}
-
-.gender {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 form {
@@ -40,7 +32,7 @@ form:hover {
 input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid crimson;
+  border-bottom: 2px solid rgb(193, 53, 132);
   padding: 12px 20px;
   box-sizing: border-box;
   background-color: rgb(255, 250, 228);
@@ -48,7 +40,7 @@ input {
 }
 input:hover {
   width: 100%;
-  border: 2px solid crimson;
+  border: 2px solid rgb(193, 53, 132);
   transition: 0.5s;
 }
 
@@ -106,9 +98,7 @@ input:hover {
   height: 70%;
   width: 100%;
 }
-.container {
-  margin-bottom: 10px;
-}
+
 .email {
   margin: 20px;
 }
