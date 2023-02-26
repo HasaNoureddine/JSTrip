@@ -84,12 +84,23 @@ class Course {
 //-----------------------------------------------------------//
 
 function Reverse(string) {
-  let answer = ``;
-  while (string.length > 0) {
-    answer += string[string.length - 1];
-    string = string.slice(0, string.length - 1);
+  let arrReverse = [];
+  for (i = 0; i < string.length; i++) {
+    if (string[i] >= "0" && string[i] <= "9") {
+      arrReverse.push(string[i]);
+    }
   }
-  return answer;
+
+  let j = arrReverse.length - 1;
+  let ans = "";
+  for (i = 0; i < string.length; i++) {
+    if (string[i] >= "0" && string[i] <= "9") {
+      ans += arrReverse[j];
+      j--;
+    } else ans += string[i];
+  }
+  console.log(arrReverse);
+  return ans;
 }
 
 //-----------------------------------------------------------//

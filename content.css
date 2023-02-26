@@ -102,6 +102,7 @@ input[type="submit"] {
   color: white;
   background-color: springgreen;
   cursor: pointer;
+  margin: 5px;
 }
 
 img {
